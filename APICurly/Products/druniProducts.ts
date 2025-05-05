@@ -1,0 +1,472 @@
+export interface Product {
+  id: number;
+  name: string;
+  category: string;
+  store: string;
+  price: string;
+  methodCurlyApproved: boolean;
+  ingredientsId: number;
+  image: string;
+  url?: string;
+  description?: string;
+}
+
+export const druniProducts: Product[] = [
+  {
+    id: 1,
+    name: "NELLY Curly Method | 300ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "3,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 1,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309257.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curly-method-nelly-mascarilla-rizos",
+    description: "Nuestra mascarilla vegana intensiva ayuda a reparar la fibra capilar gracias a su poder hidratante. Formulada una combinación de diferentes acondicionadores de origen natural que facilita el desenredo, aporta brillo y suavidad a la vez que reduce el frizz."
+  },
+  {
+    id: 2,
+    name: "NELLY Curly Method | 200ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "3,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 2,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309256.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curly-method-nelly-gel-activador-rizos",
+    description: "Gel activador de rizos vegano con efecto long-lasting y antifrizz. Define y activa los rizos, dejándolos vibrantes y flexibles. Enriquecido con extractos de lino y chía, aceite de coco y keratina vegetal."
+  },
+  {
+    id: 3,
+    name: "NELLY Curly Method | 200ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "3,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 3,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309258.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curly-method-nelly-spray-capilar-rizos",
+    description: "Spray de fácil aplicación con fórmula vegana que potencia el rizo dejando el cabello con aspecto natural, sin dejar restos ni cracking. Un must para los cabellos curly, ya que refresca y refuerza los rizos de forma instantánea sin necesidad de lavar el cabello."
+  },
+  {
+    id: 4,
+    name: "NELLY Curly Method | 400ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "3,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 4,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309255.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curly-method-nelly-champu-rizos",
+    description: "Champú suave sin sulfatos, sin siliconas y sin alcohol que limpia delicadamente el cabello, proporcionando suavidad y brillo. Su fórmula vegana con extractos de lino y chía, aceite de coco y keratina vegetal."
+  },
+  {
+    id: 5,
+    name: "TANGLE TEEZER Naturally Curly | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "14,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 5,
+    image: "https://www.druni.es/media/catalog/product/1/3/1308185.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/naturally-curly-tangle-teezer-cepillo-desenredante-cabello-mojado",
+    description: "Cepillo con diseño clásico, con un mango más fino para facilitar su uso."
+  },
+  {
+    id: 6,
+    name: "TANGLE TEEZER Straight-Curly | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 6,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309354.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/straight-curly-tangle-teezer-cepillo-mini-marine-cabello",
+    description: "El cepillo Mini Marine teal Rosebud de Tangle Teezer desenreda sin tirones Facilita el peinado gracias a las cerdas que se deslizan con suavidad sin esfuerzo por todos los tipos de cabello, hasta los rizados y los más gruesos."
+  },
+  {
+    id: 7,
+    name: "TANGLE TEEZER Straight Curly | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "14,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 7,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309351.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/straight-curly-tangle-teezer-cepillo-apricot-rosebud",
+    description: "El cepillo Apricot & Rosebud de Tangle Teezer desenreda sin tirones, especialmente diseñado para cabello fino y frágil."
+  },
+  {
+    id: 8,
+    name: "TANGLE TEEZER Curly Coily | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "14,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 8,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309344.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curly-coily-tangle-teezer-cepillo-ultimate-detangler",
+    description: "El cepillo Ultimate Detangler de Tangle Teezer desenreda sin tirones, especialmente diseñado para cabello grueso o rizado."
+  },
+  {
+    id: 9,
+    name: "TANGLE TEEZER Straight Curly | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "14,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 9,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309343.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/straight-curly-tangle-teezer-cepillo-ultimate-detangler",
+    description: "El cepillo Ultimate Detangler de Tangle Teezer desenreda sin tirones. Facilita el peinado gracias a las cerdas que se deslizan con suavidad sin esfuerzo por todo tipo de cabello."
+  },
+  {
+    id: 10,
+    name: "GIORGI Curly Método Paso 2 | 350ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "4,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 10,
+    image: "https://www.druni.es/media/catalog/product/1/3/1308189.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/paso-2-metodo-curly-giorgi-mascarilla-cabello-rizado-nutritiva",
+    description: "La Mascarilla Nutritiva Giorgi nutre intensamente el rizo dejándolo hidratado y flexible. No apelmaza y se puede utilizar con y sin aclarado según el nivel de sequedad del cabello."
+  },
+  {
+    id: 11,
+    name: "GIORGI Curly Método Paso 3 | 250ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "4,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 11,
+    image: "https://www.druni.es/media/catalog/product/1/3/1308190.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/paso-3-metodo-curly-giorgi-gel-definidor-activador-rizos",
+    description: "El Gel Definidor Giorgi define y activa el rizo para que luzca flexible y sin encrespamiento. No apelmaza. 0% Siliconas, 0% Alcohol, 0% Sulfatos."
+  },
+  {
+    id: 12,
+    name: "GIORGI Curly Método Paso 1 | 350ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "4,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 12,
+    image: "https://www.druni.es/media/catalog/product/1/3/1308188.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/paso-1-metodo-curly-giorgi-champu-cabello-rizado-hidratante",
+    description: "El Champu Suave Giorgi sin sulfatos limpia suave y delicadamente el cabello hidratando la fibra capilar para conseguir unos rizos cuidados y sin encrespamiento."
+  },
+  {
+    id: 13,
+    name: "NELLY Kit Curly Method | 1UD",
+    category: "Cabello",
+    store: "Druni",
+    price: "11,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 13,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309483.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/kit-curly-method-nelly-tratamiento-pelos-rizados",
+    description: "El kit contiene: 1 Champú Rizos 400 ML, 1 Mascarilla Rizos 300 ML, 1 Gel Activador Rizos 200 ML, 1 Spray Potenciador Rizos 200 ML."
+  },
+  {
+    id: 14,
+    name: "TANGLE TEEZER",
+    category: "Accesorios",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 14,
+    image: "https://www.druni.es/media/catalog/product/8/6/8614.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/mini-straight-curly-tangle-teezer-cepillo-desenredante",
+    description: "El cepillo Ultimate Detangler de Tangle Teezer desenreda sin tirones. Este tamaño diseñado para viajes o llevar cómodamente en el bolso."
+  },
+  {
+    id: 15,
+    name: "TANGLE TEEZER Mini Straight Curly | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 15,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309342.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/mini-straight-curly-tangle-teezer-cepillo-desenredante-animal-print",
+    description: "The Original es nuestro cepillo desenredante ganador de múltiples premios, el primero que lanzó la marca. ¡Ahora en animal print en tonos de tendencia!"
+  },
+  {
+    id: 16,
+    name: "TANGLE TEEZER Cepillo Thick & Curly | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "15,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 16,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309692.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/cepillo-thick-curly-tangle-teezer-desenredante-cabello-rizado",
+    description: "Nuestro cepillo desenredante Thick & Curly está diseñado para cabello grueso, rizado o texturizado."
+  },
+  {
+    id: 17,
+    name: "TANGLE TEEZER Original Thick And Curly Dusky | 1UD",
+    category: "Accesorios",
+    store: "Druni",
+    price: "14,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 17,
+    image: "https://www.druni.es/media/catalog/product/1/3/1309338.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/original-thick-and-curly-dusky-tangle-teezer-cepillo-desenredante-cabello-rizado",
+    description: "¿Buscas el cepillo desenredante para cabello rizado? Un verdadero cambio de juego para muchos, nuestro cepillo desenredante Thick & Curly está diseñado para cabello grueso, rizado o texturizado."
+  },
+  {
+    id: 18,
+    name: "NELLY Curlyhair Espuma Moldeadora | 300ML",
+    category: "Espuma",
+    store: "Druni",
+    price: "2,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 18,
+    image: "https://www.druni.es/media/catalog/product/1/3/1308511.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curlyhair-nelly-espuma-moldeadora-rizos",
+    description: "Para unos rizos suaves, con cuerpo y libres del temido encrespamiento. Consigue unos rizos definidos, sin sensación de acartonamiento y con un extra de volumen."
+  },
+  {
+    id: 19,
+    name: "AS I AM Born Curly | 240ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "7,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 19,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003770.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/born-curly-shampoo-as-i-am-champu-infantil",
+    description: "Born Curly Aloe Shampoo & Wash es perfecto para el cabello, el cuero cabelludo y la piel delicada de sus hijos. Efectivamente limpia mientras mantiene el equilibrio de humedad natural."
+  },
+  {
+    id: 20,
+    name: "KATIVA Champú Curly | 355ML",
+    category: "Champús",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 20,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005327.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/champu-curly-kativa-rizos-definidos-control-frizz",
+    description: "Limpia sin agredir el cuero cabelludo brindando hidratación y control de frizz para un cabello con rizos definidos y un rebote natural."
+  },
+  {
+    id: 21,
+    name: "AS I AM Born Curly | 240ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 21,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003773.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/born-curly-cowash-as-i-am",
+    description: "Born Curly Avocado Shea Cowash limpia eficazmente sin reducir la humedad natural. Suave para uso diario. Excelente para los tipos de cabello 3 y 4."
+  },
+  {
+    id: 22,
+    name: "AS I AM Born Curly | 240ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 22,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003772.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/born-curly-conditioner-as-i-am-acondicionador-infantil",
+    description: "Born Curly acondicionador y desenredante agrega humedad, brillo y mejora la manejabilidad."
+  },
+  {
+    id: 23,
+    name: "AS I AM Born Curly | 240ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 23,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003771.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/born-curly-curl-defining-jelly-as-i-am-gel-definidor-rizos-infantil",
+    description: "Born Curly Argan Curl Defining Jelly define maravillosamente las texturas rizadas. Suaviza la formación natural de los rizos y con el nivel adecuado de fijación."
+  },
+  {
+    id: 24,
+    name: "CURLY LOVE Detox Shampoo | 290ML",
+    category: "Champús",
+    store: "Druni",
+    price: "7,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 24,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003153.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/detox-shampoo-curly-love-champu-cabello-graso",
+    description: "Curly Love Detox champú de desintoxicación limpia toxinas y acumulaciones. Para los rizos 2B a 3B. Contiene Vinagre de sidra de manzana, Pepino y Té Verde."
+  },
+  {
+    id: 25,
+    name: "KATIVA Acondicionador Curly Plex | 450ML",
+    category: "Acondicionadores",
+    store: "Druni",
+    price: "12,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 25,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005328.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/acondicionador-curly-plex-kativa-suave-brillante-dos-usos",
+    description: "Producto dual, funciona como: 1. Conditioner: desenreda al instante y suaviza el cabello. 2. Deep treatment: Actúa en el interior de la hebra capilar brindando una acción reparadora más intensa."
+  },
+  {
+    id: 26,
+    name: "KATIVA Crema Activadora Rizos | 240ML",
+    category: "Cremas de peinado",
+    store: "Druni",
+    price: "11,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 26,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005329.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/crema-activadora-rizos-kativa-define-controla-ondas",
+    description: "Controla y define las ondas al instante, sin agregar peso ni apelmazarlos, incluso en condiciones de alta humedad (humidity control)."
+  },
+  {
+    id: 27,
+    name: "KATIVA Gel Activador Rizos Fuerte | 240ML",
+    category: "Gel Activo",
+    store: "Druni",
+    price: "11,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 27,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005330.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/gel-activador-rizos-fuerte-kativa-define-controla-ondas",
+    description: "Controla y define los rizos al instante, sin agregar peso ni apelmazarlos, incluso en condiciones de alta humedad (humidity control)."
+  },
+  {
+    id: 28,
+    name: "KATIVA Gel Curly Plex | 300ML",
+    category: "Gel Activo",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 28,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005642.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/gel-curly-plex-kativa-fijacion-capilar-rizos",
+    description: "Ayuda a fijar los rizos con un efecto de larga duración, dejando el cabello suave, brillante, manejable y sin crujidos."
+  },
+  {
+    id: 29,
+    name: "KATIVA Aceite Capilar Curly Plex | 100ML",
+    category: "Aceite Capilar",
+    store: "Druni",
+    price: "12,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 29,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005641.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/aceite-curly-plex-kativa-nutricion-hidratacion-capilar",
+    description: "Nutre e hidrata intensamente el cabello, dejándolo extra suave y brillante. Shea Butter y Aceite de Semillas de Lino."
+  },
+  {
+    id: 30,
+    name: "CURLY LOVE Hydrating Conditioner | 290ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "7,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 30,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003154.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/hydrating-conditioner-curly-love-acondicionador-hidratante",
+    description: "Acondicionador hidratante que acondiciona, sella la humedad y controla el frizz."
+  },
+  {
+    id: 31,
+    name: "CURLY LOVE Ultra Hydrating Mask | 290ML",
+    category: "Mascarillas",
+    store: "Druni",
+    price: "7,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 31,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003156.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/ultra-hydrating-mask-curly-love-mascarilla-ultra-hidratante",
+    description: "Curly Love Mascarilla Ultra Hidratante para mantener tus rizos hidratados, retiene la humedad y evita el encrespamiento y los rizos esponjosos."
+  },
+  {
+    id: 32,
+    name: "CURLY LOVE Cowash | 290ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "7,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 32,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003157.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/cowash-curly-love-limpiador-crema",
+    description: "Curly Love Cowash con Aceite de Coco, Manteca de Mango y Aceite de Jojoba es una crema 2 en 1 que limpia y acondiciona al mismo tiempo."
+  },
+  {
+    id: 33,
+    name: "CURLY LOVE Leave In Conditioner | 290ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 33,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003158.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/leave-in-conditioner-curly-love-acondicionador-mango",
+    description: "Acondicionador sin enjuague que desenreda, protege y acondiciona el cabello rizado. El cabello está hidratado y no es esponjoso."
+  },
+  {
+    id: 34,
+    name: "CURLY LOVE Curl Styling Gel | 290ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 34,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003152.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curl-styling-gel-curly-love-gel-definidor-rizos",
+    description: "Estilizador de rizos. Con su poder de fijación medio es perfecto para conseguir una duradera definición. Rizos definidos y suaves."
+  },
+  {
+    id: 35,
+    name: "CURLY LOVE Curl Definer Cream | 290ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 35,
+    image: "https://www.druni.es/media/catalog/product/7/0/7003155.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/curl-definer-cream-curly-love-crema-peinado",
+    description: "Es la crema de peinado perfecta para darle más textura a tus rizos. Define y sella los rizos mientras retiene la humedad."
+  },
+  {
+    id: 36,
+    name: "KATIVA Spray Next Day Curl Refreseher | 225ML",
+    category: "Cabello",
+    store: "Druni",
+    price: "9,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 36,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005331.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/spray-next-day-curl-refreseher-kativa-reactiva-refresca-rizos",
+    description: "Refresca y revive los rizos, redefiniendo su forma al instante, sin agregar peso ni apelmazarlos entre lavados."
+  },
+  {
+    id: 37,
+    name: "CECOTEC Rizador Surfacre Curly Sphere | 1UD",
+    category: "Cabello",
+    store: "Druni",
+    price: "29,99 €",
+    methodCurlyApproved: false,
+    ingredientsId: 37,
+    image: "https://www.druni.es/media/catalog/product/7/0/7005029.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/rizador-surfacre-curly-sphere-cecotec-ceramica-turmalina",
+    description: ""
+  },
+  {
+    id: 38,
+    name: "COLOR WOW",
+    category: "Cabello",
+    store: "Druni",
+    price: "",
+    methodCurlyApproved: false,
+    ingredientsId: 38,
+    image: "https://www.druni.es/media/catalog/product/8/8/8837.jpg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
+    url: "https://www.druni.es/dream-coat-curly-hair-color-wow-tratamiento-antifrizz-cabello-rizado",
+    description: "Consigue una textura suave y sedosa con el Spray Dream Coat Supernatural de Color WOW para Curly Hair, un spray sin silicona que combate el encrespamiento."
+  }
+
+];
